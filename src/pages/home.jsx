@@ -20,7 +20,7 @@ export default function home() {
           </div>
         </div>
         
-        <div className="card">
+        <div className="card mb-3">
           <div className="card-body">
             <h5 className="card-title">Currency Convert</h5>
             <p className="card-text">
@@ -29,6 +29,18 @@ export default function home() {
               <p className='m-0'>What did you learn : Variable & DOM, Type Data, Conditional, Operator, Function</p>              
               </p>
             <a href="/currency" className="btn btn-primary" target='_blank'>Solve Challenge</a>
+          </div>
+        </div>
+
+        <div className="card mb-3">
+          <div className="card-body">
+            <h5 className="card-title">Mobile Legend</h5>
+            <p className="card-text">
+              <p className='m-0'>Level : Hard</p>
+              <p className='m-0'>Language : JavaScript, React</p>
+              <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
+              </p>
+            <a href="/mobile-legend" className="btn btn-primary" target='_blank'>Solve Challenge</a>
           </div>
         </div>
       </div>
