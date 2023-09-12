@@ -14,37 +14,78 @@ export default function Countdown() {
       <div className=''>
         <h4 className='text-center mb-3'>LEARNING OBJECTIVES</h4>
         <div className='border border-1 rounded-3'>
-          <table class="table">
+          <table style={{border: '1px solid #000', width: '100%', borderCollapse: 'collapse'}}>
             <thead>
               <tr>
                 <th scope="col" className='text-center'>Topics</th>
                 <th scope="col" className='text-center'>Explanation</th>
+                <th scope="col" className='text-center'style={{border: "1px solid #000"}}>isDone</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Variable & DOM</td>
-                <td>How do I get the input value from a DOM selection stored in a variable. And displays html object manipulation using the DOM</td>
+                <td style={{border: "1px solid #000"}}>Variable & DOM</td>
+                <td style={{border: "1px solid #000"}}>How do I get the input value from a DOM selection stored in a variable. And displays html object manipulation using the DOM</td>
+                <td style={{border: "1px solid #000"}}>
+                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </td>
               </tr>
               <tr>
-                <td>Date()</td>
-                <td>Generate using the Date() constructor to get a value in the form of a date object that has been converted from the input tag</td>
+                <td style={{border: "1px solid #000"}}>Type Data</td>
+                <td style={{border: "1px solid #000"}}>Get familiar with the date data type</td>
+                <td style={{border: "1px solid #000"}}>
+                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </td>
               </tr>
               <tr>
-                <td>Conditional (IF Else)</td>
-                <td>To handle the condition if there is a distance then the time calculation function will be run</td>
+                <td style={{border: "1px solid #000"}}>Date()</td>
+                <td style={{border: "1px solid #000"}}>Generate using the Date() constructor to get a value in the form of a date object that has been converted from the input tag</td>
+                <td style={{border: "1px solid #000"}}>
+                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </td>
               </tr>
               <tr>
-                <td>Operator</td>
-                <td>Calculates the date between the current time and the time set by the input tag</td>
+                <td style={{border: "1px solid #000"}}>Conditional</td>
+                <td style={{border: "1px solid #000"}}>To handle the condition if there is a distance then the time calculation function will be run</td>
+                <td style={{border: "1px solid #000"}}>
+                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </td>
               </tr>
               <tr>
-                <td>Function</td>
-                <td>To handle each conversion process so that it can appear in display form</td>
+                <td style={{border: "1px solid #000"}}>Operator</td>
+                <td style={{border: "1px solid #000"}}>Calculates the date between the current time and the time set by the input tag</td>
+                <td style={{border: "1px solid #000"}}>
+                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </td>
+              </tr>
+              <tr>
+                <td style={{border: "1px solid #000"}}>Function</td>
+                <td style={{border: "1px solid #000"}}>To handle each conversion process so that it can appear in display form</td>
+                <td style={{border: "1px solid #000"}}>
+                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </td>
+              </tr>
+              <tr>
+                <td style={{border: "1px solid #000"}}>SetInterval()</td>
+                <td style={{border: "1px solid #000"}}>To handle each conversion process so that it can appear in display form</td>
+                <td style={{border: "1px solid #000"}}>
+                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
+      </div>
+
+      <div className='mt-5'>
+        <h5 className='text-center mb-3'>Submit your work</h5>
+        <form>
+          <div className="mb-3">
+            <input type="url" className="form-control mb-3" id="exampleInputEmail1" placeholder='Input your github link' />
+            <input type="url" className="form-control mb-3" id="exampleInputEmail1" placeholder='Input your vercel link' />
+            <button type="submit" className="btn btn-primary">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   )

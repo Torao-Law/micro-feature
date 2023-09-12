@@ -84,9 +84,11 @@ function Currency() {
           </select>
           <button onClick={convertCurrency} className='btn btn-primary rounded rounded-4 px-5'>Convert</button>
         </div>
-        <p>
-          Result: <span id="result">{result}</span>
-        </p>
+        <p className='my-2'>Try output : </p>
+        <div className='border border-dark rounded-3 d-flex align-items-center px-3' style={{width: 400, height: 50}}>
+          <span>{result}</span>
+        </div>
+        
       </div>
     </div>
   );
