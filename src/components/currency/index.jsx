@@ -50,7 +50,7 @@ function Currency() {
 
   return (
     <div>
-      <h3 className='text-center'>Konversi Mata Uang</h3>
+      <h3 className='text-center'>Currency Converter</h3>
       <div className='py-3 px-5 border rounded-3 mt-3'>
         <div className='d-flex justify-content-between align-items-center'>
           <input
@@ -71,7 +71,7 @@ function Currency() {
             <option value="gbp">GBP</option>
             <option value="idr">IDR</option>
           </select>
-          <span className='me-3'>ke</span>
+          <span className='me-3'>TO</span>
           <select
             className='p-2 me-3'
             value={toCurrency}
@@ -85,7 +85,7 @@ function Currency() {
           <button onClick={convertCurrency} className='btn btn-primary rounded rounded-4 px-5'>Convert</button>
         </div>
         <p>
-          Hasil: <span id="result">{result}</span>
+          Result: <span id="result">{result}</span>
         </p>
       </div>
     </div>
