@@ -50,7 +50,7 @@ function Currency() {
 
   return (
     <div>
-      <h3 className='text-center'>Currency Converter</h3>
+      <h5 className='text-center'>Currency Converter</h5>
       <div className='py-3 px-5 border rounded-3 mt-3'>
         <div className='d-flex justify-content-between align-items-center'>
           <input

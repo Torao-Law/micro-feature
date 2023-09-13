@@ -1,0 +1,15 @@
+.board-row {
+  display: flex;
+  flex-direction: row; /* Menjadikan baris horizontal */
+}
+
+.square {
+  display: flex;
+  align-items: center; /* Tengah vertikal */
+  justify-content: center; /* Tengah horizontal */
+  padding: 20px;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+}
