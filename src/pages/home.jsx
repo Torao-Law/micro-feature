@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function home() {
+  const navigate = useNavigate()
   return (
     <div className='container py-5'>
       <div className='border border-primary border-3 rounded-2 p-5 mx-auto' style={{width: "100%"}}>
@@ -16,7 +17,7 @@ export default function home() {
               <p className='m-0'>Language : <span>JavaScript, React</span></p>
               <p className='m-0'>What did you learn : Variable & DOM, Type Data, Conditional, Operator, Function, Date(), setInterval()</p>              
               </p>
-            <Link href="/count" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <button onClick={() => navigate('/count')} className="btn btn-primary" target='_blank'>Solve Challenge</button>
           </div>
         </div>
         
@@ -28,7 +29,7 @@ export default function home() {
               <p className='m-0'>Language : <span>JavaScript, React</span></p>
               <p className='m-0'>What did you learn : Variable & DOM, Type Data, Conditional, Operator, Function</p>              
               </p>
-            <Link href="/currency" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <button onClick={() => navigate('/currency')} className="btn btn-primary" target='_blank'>Solve Challenge</button>
           </div>
         </div>
 
@@ -40,7 +41,7 @@ export default function home() {
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link href="/mobile-legend" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <button onClick={() => navigate('/mobile-legend')} className="btn btn-primary" target='_blank'>Solve Challenge</button>
           </div>
         </div>
        
@@ -52,7 +53,7 @@ export default function home() {
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link href="/tic-tac" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <button onClick={() => navigate('/tic-tac')} className="btn btn-primary" target='_blank'>Solve Challenge</button>
           </div>
         </div>
         
@@ -64,7 +65,7 @@ export default function home() {
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link href="/matching-card" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <button onClick={() => navigate('/matching-card')} className="btn btn-primary" target='_blank'>Solve Challenge</button>
           </div>
         </div>
 
@@ -76,19 +77,19 @@ export default function home() {
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link href="/salary" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <button onClick={() => navigate('/salary')} className="btn btn-primary" target='_blank'>Solve Challenge</button>
           </div>
         </div>
 
         <div className="card mb-3">
           <div className="card-body">
-            <h5 className="card-title">Word Scramble</h5>
+            <h5 className="card-title">Word Scramb</h5>
             <p className="card-text">
               <p className='m-0'>Level : Easy</p>
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link href="/salary" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <button onClick={() => navigate('/salary')} className="btn btn-primary" target='_blank'>Solve Challenge</button>
           </div>
         </div>
       </div>
