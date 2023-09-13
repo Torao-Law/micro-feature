@@ -17,7 +17,7 @@ export default function home() {
               <p className='m-0'>What did you learn : Variable & DOM, Type Data, Conditional, Operator, Function, Date(), setInterval()</p>              
               </p>
             
-            <Link to="/count" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <Link to="/count" className="btn btn-primary">Solve Challenge</Link>
           </div>
         </div>
         
@@ -29,7 +29,7 @@ export default function home() {
               <p className='m-0'>Language : <span>JavaScript, React</span></p>
               <p className='m-0'>What did you learn : Variable & DOM, Type Data, Conditional, Operator, Function</p>              
               </p>
-            <Link to="/currency" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <Link to="/currency" className="btn btn-primary">Solve Challenge</Link>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ export default function home() {
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link to="/mobile-legend" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <Link to="/mobile-legend" className="btn btn-primary">Solve Challenge</Link>
           </div>
         </div>
        
@@ -53,7 +53,7 @@ export default function home() {
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link to="/tic-tac" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <Link to="/tic-tac" className="btn btn-primary">Solve Challenge</Link>
           </div>
         </div>
         
@@ -65,7 +65,7 @@ export default function home() {
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link to="/matching-card" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <Link to="/matching-card" className="btn btn-primary">Solve Challenge</Link>
           </div>
         </div>
 
@@ -77,7 +77,7 @@ export default function home() {
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link to="/salary" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <Link to="/salary" className="btn btn-primary">Solve Challenge</Link>
           </div>
         </div>
 
@@ -89,7 +89,7 @@ export default function home() {
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link to="/salary" className="btn btn-primary" target='_blank'>Solve Challenge</Link>
+            <Link to="/salary" className="btn btn-primary">Solve Challenge</Link>
           </div>
         </div>
       </div>
