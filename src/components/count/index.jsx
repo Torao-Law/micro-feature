@@ -1,38 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function CountdownTimer() {
   const [targetDateTime, setTargetDateTime] = useState('');
   const [timeRemaining, setTimeRemaining] = useState(null);
+  const [isCounting, setIsCounting] = useState(false);
+  const [countdownMessage, setCountdownMessage] = useState('Mulai menghitung');
 
-  const startCountdown = () => {
-    const targetTime = new Date(targetDateTime).getTime();
+  useEffect(() => {
+    let intervalId;
 
-    if (isNaN(targetTime)) {
-      alert('Masukkan tanggal dan waktu target yang valid.');
-      return;
+    if (isCounting) {
+      const targetTime = new Date(targetDateTime).getTime();
+
+      if (isNaN(targetTime)) {
+        alert('Masukkan tanggal dan waktu target yang valid.');
+        setIsCounting(false);
+        return;
+      }
+
+      intervalId = setInterval(() => {
+        const now = new Date().getTime();
+        const remaining = targetTime - now;
+
+        if (remaining <= 0) {
+          clearInterval(intervalId);
+          setIsCounting(false);
+          setCountdownMessage('Waktu telah habis!');
+          setTimeRemaining(null);
+        } else {
+          const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (remaining % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+          const formattedTime = `${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik`;
+          setTimeRemaining(formattedTime);
+        }
+      }, 1000);
     }
 
-    const intervalId = setInterval(() => {
-      const now = new Date().getTime();
-      const remaining = targetTime - now;
+    // Membersihkan interval saat komponen unmount atau isCounting berubah
+    return () => clearInterval(intervalId);
+  }, [isCounting, targetDateTime]);
 
-      if (remaining <= 0) {
-        clearInterval(intervalId);
-        setTimeRemaining('Waktu telah habis!');
-      } else {
-        const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (remaining % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+  const startCountdown = () => {
+    setIsCounting(true);
+    setCountdownMessage('Sedang menghitung...');
+  };
 
-        const formattedTime = `${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik`;
-        setTimeRemaining(formattedTime);
-      }
-    }, 1000);
+  const resetCountdown = () => {
+    setIsCounting(false);
+    setCountdownMessage('Mulai menghitung');
+    setTargetDateTime('');
+    setTimeRemaining(null);
   };
 
   return (
@@ -45,10 +69,16 @@ function CountdownTimer() {
           type="datetime-local"
           value={targetDateTime}
           onChange={(e) => setTargetDateTime(e.target.value)}
+          disabled={isCounting}
         />
-        <button onClick={startCountdown} className='btn btn-primary px-5 rounded rounded-4'>Start</button>
+        <button onClick={isCounting ? null : startCountdown} className='btn btn-primary px-5 rounded rounded-4' disabled={isCounting}>
+          {isCounting ? 'Menghitung...' : 'Start'}
+        </button>
+        {isCounting && (
+          <button onClick={resetCountdown} className='btn btn-danger ms-3 rounded rounded-4'>Reset</button>
+        )}
         <p>Countdown:</p>
-        <div id="countdownDisplay">{timeRemaining}</div>
+        <div id="countdownDisplay">{isCounting ? timeRemaining : countdownMessage}</div>
       </div>
     </div>
   );
