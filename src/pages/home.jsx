@@ -89,7 +89,7 @@ export default function home() {
               <p className='m-0'>Language : JavaScript, React</p>
               <p className='m-0'>What did you learn : Variable & DOM, Fetch API, Conditional, Operator, Function, Looping, Event Listener (Callback)</p>              
               </p>
-            <Link to="/salary" className="btn btn-primary">Solve Challenge</Link>
+            <Link to="/word" className="btn btn-primary">Solve Challenge</Link>
           </div>
         </div>
       </div>
